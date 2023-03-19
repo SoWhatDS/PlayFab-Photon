@@ -10,6 +10,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] private Button _connect;
     [SerializeField] private TMP_Text _label;
 
+    
+
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
