@@ -5,6 +5,7 @@ using PlayFab.ClientModels;
 using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
+using System;
 
 public class PlayFabLogin : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayFabLogin : MonoBehaviour
     [SerializeField] private Button _connect;
     [SerializeField] private Button _disconnect;
     [SerializeField] private TMP_Text _labelPhoton;
+
+    private const string AuthGuidKey = "auth_guid_key";
 
 
     private void Start()
@@ -29,17 +32,26 @@ public class PlayFabLogin : MonoBehaviour
         {
             PlayFabSettings.staticSettings.TitleId = "2A7EA";
         }
+
+        var needCreation = PlayerPrefs.HasKey(AuthGuidKey);
+        var id = PlayerPrefs.GetString(AuthGuidKey,Guid.NewGuid().ToString());
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = "Player 1",
-            CreateAccount = true
+            CustomId = id,
+            CreateAccount = !needCreation
         };
 
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginError);
+        PlayFabClientAPI.LoginWithCustomID(request,
+            result =>
+            {
+                PlayerPrefs.SetString(AuthGuidKey, id);
+                OnLoginSuccess(result);
+            }, OnLoginError) ;
     }
 
     private void OnLoginSuccess(LoginResult result)
     {
+
         _labelPlayFab.color = Color.green;
         _labelPlayFab.text = "You are connect to Server";
     }
