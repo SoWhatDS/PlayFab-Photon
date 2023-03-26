@@ -18,8 +18,8 @@ public abstract class AccountDataWindowBase : MonoBehaviour
 
     private void Start()
     {
-        _loading.gameObject.SetActive(false);
         SubscriptionsElementsUI();
+        _loading.gameObject.SetActive(false);
     }
 
     protected virtual void SubscriptionsElementsUI()
