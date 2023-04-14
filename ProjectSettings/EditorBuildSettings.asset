@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HomeWork8.unity
+    guid: 631a7cabab3af4565bad58dbd177d2f7
   - enabled: 0
     path: Assets/Scenes/PhotonScene.unity
     guid: c8d6c17cb706f443dad2dacd7e2aa07c
@@ -17,22 +20,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestGameScene.unity
     guid: dadc1036b2c8745f4b17dba5b373d467
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Launcher.unity
     guid: bff77b01b50254edbb6edeeaba5ae8b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 1.unity
     guid: 9b8561c6e396849a5ba48c3eb9524049
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 2.unity
     guid: 764428c63577f4580af4ce54ca9f4b1b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 3.unity
     guid: e07afcca5bf1a41f5bd28f498656b7b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 4.unity
     guid: e7a7f9734636d415ca84ef3aaf7680f6
